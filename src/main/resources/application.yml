@@ -1,0 +1,32 @@
+server:
+  port: 8888
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/shiro?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 500
+        min-idle: 0
+    lettuce:
+      shutdown-timeout: 0
+    database: 4
+mybatis:
+  mapper-locations: classpath:/mybatis/**.xml
+  type-aliases-package: com.example.demo.**.domain
+  configuration:
+    map-underscore-to-camel-case: true
+# 日志配置
+logging:
+  level:
+    com.example.demo: debug
+    org.springframework: warn
