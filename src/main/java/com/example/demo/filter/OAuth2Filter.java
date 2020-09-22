@@ -18,7 +18,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * 执行顺序 isAccessAllowed ->onAccessDenied
+ * todo: 执行顺序 isAccessAllowed ->onAccessDenied
+ * @author: zs
  */
 public class OAuth2Filter extends AuthenticatingFilter {
 
